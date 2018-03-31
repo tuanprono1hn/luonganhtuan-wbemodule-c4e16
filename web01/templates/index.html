@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Web</title>
+  </head>
+  <body>
+
+    <h1>C4E Blog</h1>
+    <!-- jinja2 template -->
+    <ul id = "posts">
+      {% for post in posts %}
+        <h3>{{ post.title }}</h3>
+        <p>
+          {{ post.content }}
+        </p>
+        <i>By:
+          <!-- conditional expression -->
+          {{ "Mr" if post.gender == 0 else "Mrs" }}
+          <!-- {% if post.gender == 0 %}
+            Mr.
+          {% elif post.gender == 1 %}
+            Mrs. -->
+          <!-- {% endif %} -->
+          {{ post.author }}
+        </i>
+      {% endfor %}
+    </ul>
+    <!-- <h3>{{ posts[1]["title"] }}</h3>
+    <p>
+      {{posts[1]["content"]}}
+    </p>
+    <i>By: {{posts[1]["author"]}}</i> -->
+
+  </body>
+</html>
