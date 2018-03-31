@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>User's Information</title>
+  </head>
+  <body>
+    <h3>
+      {% for user in users %}
+        {% if user["username"] == "quy" %}
+          {{user.quy}}
+        {% endif %}
+      {% endfor %}
+    </h3>
+  </body>
+</html>
