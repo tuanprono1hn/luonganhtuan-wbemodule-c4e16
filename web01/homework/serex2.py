@@ -16,6 +16,6 @@ def user(username):
                     "hobby" : "coding"}
             }
             ]
-    return render_template("serex2.html", users = users)
+    return render_template("serex2.html", username, users = users)
 if __name__ == '__main__':
   app.run(debug=True)

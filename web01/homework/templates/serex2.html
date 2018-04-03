@@ -6,9 +6,9 @@
   </head>
   <body>
     <h3>
-      {% for user in range len(users) %}
-        {% if users[user]["usename"] == "username" %}
-          {{users[user]["username"].name}}
+      {% for user in users %}
+        {% if user["usename"] == "username" %}
+          {{user["username"].name}}
         {% endif %}
       {% endfor %}
     </h3>
