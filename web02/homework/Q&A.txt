@@ -1,0 +1,4 @@
+- Are there any duplicate ids in the records?
+	No, there are.
+- Why? Guess what information this is field represents and its implication/application
+	ID is a primary key and used to distinguish a document from other documents, which the keys can not do.
