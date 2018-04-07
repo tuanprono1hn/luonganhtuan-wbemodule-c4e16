@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form action="{{ url_for('update', id_to_find = service.id ) }}" method="post">
+      <label>Tên</label>
+      <input type="text" name="name" value="{{ service.name }}"><br>
+
+      <label>Năm sinh</label>
+      <input type="number" name="yob" value="{{ service.yob }}"><br>
+
+      <label>Giới tính</label>
+      <input type="radio" name="gender" value="{{ service.gender }}">Female
+      <input type="radio" name="gender" value="{{ service.gender }}">Male <br>
+
+      <label>Số điện thoại</label>
+      <input type="text" name="phone" value="{{ service.phone }}"><br>
+
+      <label>Chiều cao</label>
+      <input type="number" name="height" value="{{ service.height }}"><br>
+
+      <input type="submit" value = "Cập nhật">
+
+  </body>
+</html>

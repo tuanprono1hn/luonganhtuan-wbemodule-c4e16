@@ -20,9 +20,20 @@ mlab.connect()
 @app.route('/')
 def index():
     return render_template("index.html")
+@app.route("/service")
+def service():
+    all_services = Service.objects()
+    return render_template("service.html", all_services=all_services)
+@app.route("/detail/<id_to_find>")
+def detail(id_to_find):
+    service = Service.objects.with_id(id_to_find)
+    if service is None:
+        return "Not found"
+    else:
+        return render_template("detail.html", service=service)
 @app.route("/search/<int:gender>")
-def search(gender):
-    all_services = Service.objects(gender=gender, yob__lte=1998, address__icontains= "Hà Nội")
+def search():
+    all_services = Service.objects(yob__lte=1998)
     # kieu_anh = all_services[0]
     return render_template("search.html", all_services=all_services)
 @app.route("/admin")
@@ -45,11 +56,27 @@ def create():
         form = request.form
         name = form["name"]
         yob = form["yob"]
-        address = form["address"]
+        gender = form["gender"]
         phone = form["phone"]
 
-        new_service = Service(name=name, yob=yob, address=address, phone=phone)
+        new_service = Service(name=name, yob=yob, gender=gender, phone=phone)
         new_service.save()
+        return redirect(url_for("admin"))
+@app.route("/update-service/<id_to_find>", methods = ["GET", "POST"])
+def update(id_to_find):
+    service_to_update = Service.objects.with_id(id_to_find)
+    if id_to_find is None:
+        return "Not found"
+    if request.method == "GET":
+        return render_template("update.html", service=service_to_update)
+    elif request.method == "POST":
+        form = request.form
+        service_to_update.name = form["name"]
+        service_to_update.yob = form["yob"]
+        service_to_update.gender = form["gender"]
+        service_to_update.phone = form["phone"]
+        service_to_update.height = form["height"]
+        service_to_update.save()
         return redirect(url_for("admin"))
 
 if __name__ == '__main__':

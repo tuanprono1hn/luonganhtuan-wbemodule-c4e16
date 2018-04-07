@@ -16,8 +16,6 @@
           <th>Gender</th>
           <th>Phone</th>
           <th>Height</th>
-          <th>Address</th>
-          <th>Status</th>
           <th></th>
         </tr>
       </thead>
@@ -30,10 +28,8 @@
             <td>{{ "Nam" if service.gender == 1 else "Nữ" }}</td>
             <td>{{ service.phone }}</td>
             <td>{{ service.height }}</td>
-            <td>{{ service.address }}</td>
-            <td>{{ "Rảnh" if service.gender == True else "Bận" }}</td>
             <td>
-              <a href="#">Sửa</a>
+              <a href="{{ url_for('update', id_to_find = service.id) }}">Sửa</a>
               <a href="{{ url_for('delete', service_id = service.id) }}">Xóa</a>
 
             </td>
