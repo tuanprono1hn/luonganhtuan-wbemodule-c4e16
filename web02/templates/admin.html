@@ -11,6 +11,7 @@
       <thead>
         <tr>
           <th>Stt</th>
+          <th>Image</th>
           <th>Name</th>
           <th>YOB</th>
           <th>Gender</th>
@@ -23,6 +24,7 @@
         {% for service in services %}
           <tr>
             <td>{{ loop.index }}</td>
+            <td> <img src="{{ service.image }}"> </td>
             <td>{{ service.name}}</td>
             <td>{{ service.yob }}</td>
             <td>{{ "Nam" if service.gender == 1 else "Nữ" }}</td>

@@ -71,12 +71,13 @@ def update(id_to_find):
         return render_template("update.html", service=service_to_update)
     elif request.method == "POST":
         form = request.form
-        service_to_update.name = form["name"]
-        service_to_update.yob = form["yob"]
-        service_to_update.gender = form["gender"]
-        service_to_update.phone = form["phone"]
-        service_to_update.height = form["height"]
-        service_to_update.save()
+        name = form["name"]
+        yob = int(form["yob"])
+        gender = form["gender"]
+        phone = form["phone"]
+        height = form["height"]
+        service_to_update.update(set__name=name, set__yob=yob, set__gender=gender, set__phone=phone, set__height=height)
+        service_to_update.reload()
         return redirect(url_for("admin"))
 
 if __name__ == '__main__':

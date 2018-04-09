@@ -4,7 +4,7 @@ from random import randint, choice
 from faker import Faker
 mlab.connect()
 fake = Faker()
-img_list = ["https://drive.google.com/open?id=1HBK-g4IS8A8kpWaAtThZ1WnwlI0TVakY",
+img_list = ["https://image.freepik.com/free-photo/hair-style-street-fashion-beautiful-girl_1139-844.jpg",
             "https://drive.google.com/open?id=1w6MEZYNJjsWRyylyJrEPjxJomU5lO4JO",
             "https://drive.google.com/open?id=1e6P2ljCQlFX6RPrNClwTUsiheUCTnHl-",
             "https://drive.google.com/open?id=1zlOKHqoZhiJ4uq2IXRszDvwU1gT_ZeOa",
