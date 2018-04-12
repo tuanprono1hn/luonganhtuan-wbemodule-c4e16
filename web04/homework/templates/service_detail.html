@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <img src="{{ service.image }}" width="1280" height="720">
+    <h2><b>Name: </b> {{ service.name }}</h2>
+    <p><b>YOB: </b> {{ service.yob }}</p>
+    <p><b>Gender: </b> {{ service.gender }}</p>
+    <p><b>Height: </b> {{ service.height }}</p>
+    <p><b>Phone: </b> {{ service.phone }}</p>
+    <p><b>Description: </b> {{ service.description }}</p>
+    <p><b>Measurements: </b> {{ service.measurements }}</p>
+    <p><button type="button" name="button"><a href="{{ url_for('order', ordered = service.id) }}">Order service</a> </button> </p>
+    <p><button type="button" name="button"><a href="{{ url_for('sign_out') }}">Sign out</a> </button> </p>
+  </body>
+</html>

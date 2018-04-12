@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Sign in</title>
+  </head>
+  <body>
+    <form method="post">
+      <b><label>Username: </label> </b><br>
+      <input type="text" name="username" value=""><br>
+      <b><label>Passord: </label> </b><br>
+      <input type="text" name="password" value=""><br>
+      <input type="submit" value="Sign in">
+      <button type="button" name="button"><a href="{{ url_for('sign_up') }}">Sign up</a></button>
+      <!-- <a href="{{ url_for('service_detail', service_id=service_id)}}"><input type="submit" value="Sign in"></a> -->
+
+    </form>
+
+  </body>
+</html>

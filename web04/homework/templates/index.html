@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Warm Winter</title>
+  </head>
+  <body>
+    <h1>Welcome to Warm Winter Project</h1>
+    {% for service in all_services %}
+      <img src="{{ service.image }}" width="400" height="300" alt="You know what i mean :P">
+      <p><b>{{ service.name }}</b></p>
+      <p>{{ service.yob }}</p>
+      <p>Height: {{ service.height }}</p>
+      <a href="{{ url_for('service_detail', service_id = service.id) }}">Detail</a>
+    {% endfor %}
+
+  </body>
+</html>
