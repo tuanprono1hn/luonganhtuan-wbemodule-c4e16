@@ -64,9 +64,10 @@ def sign_up():
         form = request.form
         all_user = User.objects()
         username = form["username"]
-        password = form["password"]
-        user = User.objects(username=username, password=password)
-        if list(user) == []:
+        email = form["email"]
+        name_user = User.objects(username=username)
+        email_user = User.objects(email=email)
+        if list(name_user) == [] and list(email_user) == []:
             session["user_signed_in"] = True
             fullname = form["fullname"]
             email = form["email"]
