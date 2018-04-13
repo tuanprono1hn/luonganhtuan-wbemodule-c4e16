@@ -1,0 +1,18 @@
+.text-uppercase {
+  text-transform: uppercase;
+}
+.text-red {
+  color: red
+}
+.font-size {
+  font-size: 40px
+}
+.font-style {
+  font-family: 'Gugi', cursive;
+}
+.font-weight-bold {
+  font-weight: bold;
+}
+.text-cappitalize {
+  text-transform: capitalize;
+}
