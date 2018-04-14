@@ -1,0 +1,140 @@
+#page-content {
+  width: 1885px;
+  height: 1885px;
+  background-color: white;
+}
+#page-footer {
+  width: 1885px;
+  height: 80px;
+  background-color: red;
+}
+#menu {
+  width: 200px;
+  height: 1885px;
+  /* background-color: blue; */
+}
+#content {
+  width: 1650px;
+  height: 1885px;
+  /* background-color: green; */
+}
+.flex-end {
+  align-items: flex-end;
+}
+.d-inline-block {
+  display: inline-block;
+}
+.flex-box {
+  display: flex;
+}
+.flex-direction-column {
+  flex-direction: column;
+}
+.flex-direction-row {
+  flex-direction: row;
+}
+.space-between {
+  justify-content: space-between;
+}
+.align-content-between {
+  align-content: space-between;
+}
+.bg-lightblue {
+  background-color: lightblue;
+}
+.bg-yellow {
+  background-color: yellow;
+}
+.bg-pink {
+  background-color: pink;
+}
+.bg-grey{
+  background-color: grey;
+}
+.bg-brown {
+  background-color: brown;
+}
+.bg-black {
+  background-color: black;
+}
+.bg-white {
+  background-color: white;
+}
+.bg-blue {
+  background-color: blue;
+}
+.bg-green {
+  background-color: green;
+}
+.w-200px {
+  width: 200px;
+}
+.w-100 {
+  width: 100%;
+}
+.w-25 {
+  width: 25%;
+}
+.w-23 {
+  width: 23%;
+}
+.w-24 {
+  width: 24.9%;
+}
+.w-40 {
+  width: 40%;
+}
+.w-60 {
+  width: 60%;
+}
+.h-775 {
+  height: 775px;
+}
+.h-18 {
+  height: 18%;
+}
+.h-40 {
+  height: 40%;
+}
+.h-58 {
+  height: 58%;
+}
+.h-100 {
+  height: 100%;
+}
+.h-800px {
+  height: 800px;
+}
+.h-150px {
+  height: 150px;
+}
+.h-70px {
+  height: 70px;
+}
+.h-50px {
+  height: 50px;
+}
+.h-200px {
+  height: 200px;
+}
+.h-400px {
+  height: 400px;
+}
+.h-120px {
+  height: 120px;
+}
+.mr-bottom-20px {
+  margin-bottom: 20px;
+}
+.mr-bottom-30px {
+  margin-bottom: 30px;
+}
+.mr-bottom-15px {
+  margin-bottom: 15px;
+}
+.mr-top-500px {
+  margin-top: 500px;
+}
+.mr-topic {
+  margin: 1px 0px 20px 0px;
+}
