@@ -32,8 +32,8 @@ def detail(id_to_find):
     else:
         return render_template("detail.html", service=service)
 @app.route("/search/<int:gender>")
-def search():
-    all_services = Service.objects(yob__lte=1998)
+def search(gender):
+    all_services = Service.objects(gender=gender, yob__lte=1998)
     # kieu_anh = all_services[0]
     return render_template("search.html", all_services=all_services)
 @app.route("/admin")
