@@ -3,11 +3,15 @@
   <head>
     <meta charset="utf-8">
     <title>Database Intro</title>
+    {% include "metadata.html" %}
+    <link rel="stylesheet" href="../static/css/search.css">
   </head>
   <body>
-    <h1>Search</h1>
+    {% include "homepage/navigation.html" %}
+    {% include "search/svinfo.html" %}
+    <!-- <h1>Search</h1> -->
     <!-- source, alternative -->
-    {% for service in all_services %}
+    <!-- {% for service in all_services %}
       {% if service.gender == 0 %}
         <img src="../static/image/female-profile.jpg" alt="Ảnh nóng">
       {% else %}
@@ -20,6 +24,6 @@
       <p>Phone number: {{ service.phone }}</p>
       <p>Address: {{ service.address }}</p>
       <p>Status: {{ service.status }}</p>
-    {% endfor %}
+    {% endfor %} -->
   </body>
 </html>

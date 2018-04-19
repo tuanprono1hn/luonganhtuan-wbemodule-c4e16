@@ -1,0 +1,25 @@
+<h2 class="text-center font-weight-bold text-success my-3">Hãy xem chúng tôi có gì cho bạn</h2>
+<div class="container">
+    <div class="row">
+    {% for service in all_services %}
+    <div class="card col-md-4">
+      <img class="card-img-top" src="{{ service.image }}" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">{{ service.name }}</h5>
+        <!-- <p class="card-text">{{ service.description }}</p> -->
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Năm sinh: {{service.yob}}</li>
+        <li class="list-group-item">Chiều cao: {{service.height}}</li>
+        <li class="list-group-item">Số đo 3 vòng: {{service.measurements}}</li>
+      </ul>
+      <div class="card-body">
+        <a href="{{ url_for('detail', id_to_find = service.id) }}" class="btn btn-dark">Detail <i class="mx-2 fas fa-info-circle"></i></a>
+      </div>
+    </div>
+    {% endfor %}
+
+  </div>
+</div>
+
+<!-- style="width: 18rem;" -->
